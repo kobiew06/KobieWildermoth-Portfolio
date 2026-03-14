@@ -2,21 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Kobie Wildermoth Portfolio</title>
+    <meta name="description" content="Kobie Wildermoth's portfolio website showcasing projects, skills, and contact information." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!-- this includes box icons i used -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />    
+    <!-- imported google fonts for consistent typography -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet" />
     
   </head>
+<!-- header/logo -->
   <body>
-
+        <!-- icon clicked = home -->
         <header class = "header">
             <a href="#home" class = "logo">
+                <!-- span used for styling (emphasis) -->
                 Kobie <span>Wildermoth</span>
         </a>
+        <!-- menu icon for mobile nav -->
         <i class = "bx bx-menu" id="menu-icon"></i>
 
+<!-- navigation -->
         <nav class = "navbar">
             <a href = "#home">Home</a>
             <a href = "#about">About</a>
@@ -24,13 +31,15 @@
             <a href = "#projects">Projects</a>
             <a href = "#contact">Contact</a>    
         </nav>
-
+        
+        <!-- mailto link setup making communication simple when contact me pressed. S-"Contact Kobie" b-"Hi Kobie," -->
         <a class="gradient-btn" href="mailto:kobiew06@outlook.com?subject=Contact%20Kobie&body=Hi%20Kobie,">Contact Me</a>
 
         </header>
-
+<!-- home section/ landing page -->
         <section class="home" id="home">
             <div class="home-content">
+                <!-- span for styles -->
                 <h1> Hi! I'm <span>Kobie,</span></h1>
                 <h3>
                     <span>Computer Science Student</span>
@@ -42,20 +51,27 @@
                     and I’m excited to build innovative solutions 
                     that shape the future. </p>
 
+                
                 <div class="social-icons">
+
+                    <!-- github link and logo -->
                     <a href="https://github.com/kobiew06">
                         <i class="bx bxl-github"></i>
                     </a>
                     
+                    <!-- linkedin link and logo -->
                     <a href="https://www.linkedin.com/in/kobie-wildermoth">
                         <i class="bx bxl-linkedin-square"></i>
                     </a>
 
+                    <!-- instagram link and logo -->
                     <a href="https://www.instagram.com/kobie._w/">
                         <i class="bx bxl-instagram-alt"></i>
                     </a>                    
                 </div>
                 
+                <!-- hire button uses mailto to write out email subject -->
+                <!-- want to upgrade in future (maybe linkedin messages) -->
                 <div class="btn-group">
                     <a href="mailto:kobiew06@outlook.com?subject=Job%20Opportunity:&body=Hi%20Kobie," class="btn">Hire</a>
                     <a href="#contact" class="btn">Contact</a>
@@ -64,21 +80,24 @@
 
 
         </section>
-
+<!-- about section -->
         <section class="about" id="about">
              
             <div class="about-content">
             <h2>About <span>Me</span></h2>
             <p>I began my journey in retail, earning a Certificate III and building strong people skills. I further expanded my business knowledge with a Diploma of Business. Now, I’m pursuing my passion for technology with a Computer Science degree, where I blend my entrepreneurial spirit with a love for coding and innovation. Outside of my studies, I’m also passionate about building and maintaining PCs, which has given me a deep appreciation for hardware and hands-on problem solving. My background in business, retail, and tech lets me bring a holistic, customer-focused approach as I build solutions for the future.</p>
+            <!-- google drive download link for resume -->
             <a href="https://drive.google.com/file/d/1Rv0q2taq3PSb4QSSxDEob484Li_ZjShi/view?usp=sharing" class="btn">Download CV</a>
         </section>
-
+<!-- skills section -->
+        <!-- reused some code from removed experience section -->
         <section class ="skills" id="skills">
             <h2 class="heading">Skills</h2>
 
             <div class="experience-container">
                 <div class="experience-box">
                     <div class="experience-info">
+                        <!-- in future upgrade to proper logos relevant (real python logo) -->
                         <i class ="bx bx-code"></i>
                         <h4>Python</h4>
                         <p>Proficient in Python, using it to solve complex problems, automate tasks, and build efficient, scalable solutions.</p>
@@ -102,34 +121,39 @@
                 </div>
             </div>
         </section>
-                    
+<!-- projects section -->
         <section class="projects" id="projects">
             
             <h2 class="heading">Projects</h2>
 
+
+            <!-- videos and photos of projects here -->
+             <!-- download soon placeholder buttons ready for finished projects -->
             <div class="projects-container">
                 <div class="project-box">
                     <video src="nexus.mp4" controls></video>
                     <h3>Project 1: Nexus</h3>
                     <p>One of my key projects is Nexus, an all-in-one desktop application I’m developing. It integrates a local AI assistant, file management, system monitoring, and task automation—all built with a modular UI and a focus on efficiency. This project blends my passion for AI, user experience design, and everyday productivity.</p>
-                    <div class="btn">Review Project</div>
+                    <div class="btn">Download Soon!</div>
                 </div>
 
                 <div class="project-box">
                     <video src="Demonstration.mp4" controls></video>
                     <h3>Project 2: Task Planner</h3>
                     <p>TaskPlanner is a command-line application I built in Python to help users organize tasks by categories, due dates, and priorities. It uses object-oriented design, persistent JSON storage, and flexible command input, making task management fast and efficient.</p>
-                    <div class="btn">Review Project</div>
+                    <div class="btn">Download Soon!</div>
                 </div>
 
                 <div class="project-box">
                     <img src="next.jpg" alt="">
                     <h3>Project 3: Nexus 1.1</h3>
-                    <p>Nexus Part 2 will introduce a range of new modules, including a full file manager, advanced system tools, a dedicated browser, media controls, AI integration, and more. Each section—like notes, games, and lists—will offer intuitive navigation, customizable layouts, and seamless file and data management. Stay tuned as these features roll out!</p>
-                    <div class="btn">Review Project</div>
+                    <p>Nexus 1.1 will introduce a range of new modules, including a full file manager, advanced system tools, a dedicated browser, media controls, AI integration, and more. Each section—like notes, games, and lists—will offer intuitive navigation, customizable layouts, and seamless file and data management. Stay tuned as these features roll out!</p>
+                    <div class="btn">Download Soon!</div>
                 </div>
 
-                <div class="project-box">
+                <!-- unused project boxes removed for simplicity -->
+
+                <!-- <div class="project-box">
                     <img src="coming.jpg" alt="">
                     <h3>Project 4</h3>
                     <p>Project coming soon.</p>
@@ -148,15 +172,16 @@
                     <h3>Project 6</h3>
                     <p>Project coming soon.</p>
                     <div class="btn">Review Project</div>
-                </div>
+                </div> -->
 
                 
             </div>
         </section>
-
+<!-- contact section -->
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
 
+            <!-- inputs are grouped for formatting -->
             <form id="contact-form" action="#">
                 <div class="input-group">
                     <div class="input-box">
@@ -175,23 +200,26 @@
                 </div>
             </form>
         </section>
-
+<!-- footer -->
         <footer class="footer">
             <div class="social-icons">
-                <a href="#">
+                <!-- github -->
+                <a href="https://github.com/kobiew06">
                     <i class="bx bxl-github"></i>
                 </a>
-                
-                <a href="#">
+                <!-- linkedin -->
+                <a href="https://www.linkedin.com/in/kobie-wildermoth">
                     <i class="bx bxl-linkedin-square"></i>
                 </a>
-
-                <a href="#">
+                <!-- instagram -->
+                <a href="https://www.instagram.com/kobie._w/">
                     <i class="bx bxl-instagram-alt"></i>
                 </a>                    
             </div>
 
-            <ul class="list">
+            <!-- unused bottom nav -->
+
+            <!-- <ul class="list">
                 <li>
                     <a href="#">FAQ</a>
                 </li>
@@ -212,7 +240,7 @@
                     <a href="#contact">Contact</a>
                 </li>
 
-            </ul>
+            </ul> -->
 
             <p class="copyright">Copyright 2026 Kobie Wildermoth | All rights reserved.</p>
 
