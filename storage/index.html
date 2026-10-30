@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An AWS file storage project by Kobie Wildermoth, exploring authentication, encryption and restricted file access.">
+  <meta name="referrer" content="no-referrer">
+  <title>Cloud File Storage | Kobie Wildermoth</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="storage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="config.js" defer></script>
+  <script src="storage.js" defer></script>
+</head>
+<body class="storage-page">
+  <header class="header">
+    <a href="../" class="logo">Kobie <span>Wildermoth</span></a>
+    <a href="../#projects" class="back-link">← Back to projects</a>
+  </header>
+  <main>
+    <section class="storage-intro">
+      <p class="project-label">CST230 · Cloud Computing</p>
+      <h1>Secure Cloud <span>File Storage</span></h1>
+      <p>A browser interface for uploading, listing and downloading files stored on AWS. Access is designed around individual accounts, each with a private folder.</p>
+      <p class="storage-details">The project uses Amazon S3 in Sydney, with server-side encryption and HTTPS.</p>
+      <div id="login-panel" class="login-panel">
+        <button id="sign-in" type="button" class="btn" disabled>Sign in</button>
+        <p>An account is required. Assessor access details will be included privately with the submission.</p>
+      </div>
+      <p id="status" class="storage-status" role="status" aria-live="polite">Checking connection…</p>
+      <noscript><p>JavaScript is needed to sign in and use the file storage.</p></noscript>
+    </section>
+    <section id="file-panel" class="file-panel" aria-label="Your file storage" hidden>
+      <div class="files-heading">
+        <div><h2>Your files</h2><p id="account-label"></p></div>
+        <button id="sign-out" type="button" class="secondary-btn">Sign out</button>
+      </div>
+      <form id="upload-form">
+        <label for="upload-file">Choose a file</label>
+        <div class="upload-controls"><input id="upload-file" type="file" required aria-describedby="upload-help"><button class="btn" id="upload-button" type="submit">Upload</button></div>
+        <p id="upload-help">Up to 10 MiB per file. Use demo files without personal or confidential information.</p>
+      </form>
+      <div class="files-toolbar"><p id="file-count"></p><button id="refresh" type="button" class="secondary-btn">Refresh files</button></div>
+      <div class="table-scroll"><table><caption class="sr-only">Files in your private folder</caption><thead><tr><th scope="col">Name</th><th scope="col">Size</th><th scope="col">Uploaded</th><th scope="col">Download</th></tr></thead><tbody id="file-list"></tbody></table></div>
+      <p id="empty-message" hidden>Your folder is empty. Upload a file to get started.</p>
+      <button id="load-more" class="secondary-btn" type="button" hidden>Load more</button>
+    </section>
+    <section class="project-notes">
+      <h2>About the project</h2>
+      <p>The original implementation uses S3 and IAM, with tests covering file operations and denied requests outside the permitted folder. The web interface extends that work with account-based access.</p>
+      <p>The front end runs on GitHub Pages. The backend code uses Amazon Cognito for sign-in and an AWS API to authorise file operations. Deployment and live testing are still in progress.</p>
+    </section>
+  </main>
+  <footer class="footer"><p class="copyright">Copyright 2026 Kobie Wildermoth | All rights reserved.</p></footer>
+</body>
+</html>

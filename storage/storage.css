@@ -1,0 +1,37 @@
+.storage-page { font-size: 1.7rem; line-height: 1.8; }
+.storage-page .header { padding: 2.5rem 8%; }
+.back-link { color: white; font-size: 1.6rem; }
+.back-link:hover { color: #e69bff; }
+.storage-page main { max-width: 120rem; margin: 0 auto; padding: 15rem 5% 7rem; }
+.storage-page section { min-height: 0; padding: 0; }
+.storage-intro { max-width: 85rem; }
+.project-label { color: #c6bdca; margin-bottom: 1.5rem; }
+.storage-intro h1 { font-size: clamp(3.8rem, 6vw, 6rem); line-height: 1.2; margin-bottom: 3rem; }
+.storage-details { color: #c6bdca; margin-top: 2rem; }
+.login-panel { margin-top: 3rem; }
+.login-panel p { font-size: 1.4rem; margin-top: 2rem; }
+.storage-status { margin: 2.5rem 0; min-height: 3rem; }
+.storage-status[data-error="true"] { color: #ffb1b1; }
+.file-panel { margin: 4rem 0; padding: 3rem !important; background: var(--second-bg-color); border: 1px solid var(--main-color); border-radius: 2rem; }
+.files-heading, .files-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.files-heading h2, .project-notes h2 { font-size: 3rem; }
+#account-label, #file-count, #upload-help { font-size: 1.4rem; color: #c6bdca; }
+#upload-form { padding: 3rem 0; margin: 2rem 0; border-top: 1px solid #444; border-bottom: 1px solid #444; }
+#upload-form label { display: block; font-weight: 600; margin-bottom: 1rem; }
+.upload-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 1rem; }
+input[type="file"] { max-width: 100%; color: white; font-size: 1.5rem; }
+input[type="file"]::file-selector-button { padding: 1rem 1.5rem; color: white; background: #333; border: 1px solid #777; border-radius: 1rem; margin-right: 1rem; cursor: pointer; }
+.secondary-btn { padding: 0.7rem 1.3rem; background: transparent; color: white; border: 1px solid #ba5ded; border-radius: 1rem; cursor: pointer; font-size: 1.5rem; }
+button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; margin-top: 2rem; text-align: left; font-size: 1.5rem; }
+th, td { padding: 1.5rem 1rem; border-bottom: 1px solid #444; }
+th:first-child, td:first-child { padding-left: 0; overflow-wrap: anywhere; }
+th { font-weight: 600; }
+#empty-message { padding: 3rem 0; color: #c6bdca; }
+#load-more { margin-top: 2rem; }
+.project-notes { margin-top: 6rem; max-width: 85rem; }
+.project-notes p { margin-top: 2rem; color: #c6bdca; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+[hidden] { display: none !important; }
+@media(max-width: 600px) { .storage-page .header { padding: 2rem 5%; flex-wrap: wrap; gap: 1rem; } .back-link { font-size: 1.3rem; } .file-panel { padding: 2rem !important; } table { min-width: 55rem; } }

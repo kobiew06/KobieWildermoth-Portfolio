@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Kobie Wildermoth Portfolio</title>
-    <meta name="description" content="Kobie Wildermoth's portfolio website showcasing projects, skills, and contact information." />
+    <meta name="description" content="Kobie Wildermoth’s portfolio. Computer science, personal software projects, and experience in voice agent testing." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=9" />
     <!-- this includes box icons i used -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />    
     <!-- imported google fonts for consistent typography -->
@@ -21,10 +21,10 @@
                 Kobie <span>Wildermoth</span>
         </a>
         <!-- menu icon for mobile nav -->
-        <i class = "bx bx-menu" id="menu-icon"></i>
+        <button class="bx bx-menu" id="menu-icon" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation"></button>
 
 <!-- navigation -->
-        <nav class = "navbar">
+        <nav class = "navbar" id="main-navigation" aria-label="Main navigation">
             <a href = "#home">Home</a>
             <a href = "#about">About</a>
             <a href = "#skills">Skills</a>
@@ -39,41 +39,40 @@
 <!-- home section/ landing page -->
         <section class="home" id="home">
             <div class="home-content">
-                <!-- span for styles -->
-                <h1> Hi! I'm <span>Kobie,</span></h1>
-                <h3>
-                    <span>Computer Science Student</span>
-                </h3>
-                <p>Hi, I’m Kobie, a computer science student 
-                    with a passion for problem-solving, coding, 
-                    and creative tech projects. I’m currently 
-                    honing my skills in development and design, 
-                    and I’m excited to build innovative solutions 
-                    that shape the future. </p>
+                <div class="home-identity">
+                    <div class="home-heading">
+                        <h1>Hi, I’m <span>Kobie.</span></h1>
+                        <h3><span>Computer Science Student</span></h3>
+                    </div>
+                    <div class="home-portrait">
+                        <img src="images/kobie-portrait.png" alt="Portrait of Kobie Wildermoth" width="1254" height="1254" fetchpriority="high">
+                    </div>
+                </div>
+                <p>I’m studying computer science and building personal projects, from Python tools to a voice assistant. You can explore them below.</p>
+                <p class="current-work"><span class="current-work-dot" aria-hidden="true"></span><span><strong>Currently working on</strong> JARVIS, a voice-led macOS assistant <time datetime="2026-10-30">· updated 30 Oct 2026</time></span></p>
 
                 
                 <div class="social-icons">
 
                     <!-- github link and logo -->
-                    <a href="https://github.com/kobiew06">
+                    <a href="https://github.com/kobiew06" aria-label="GitHub">
                         <i class="bx bxl-github"></i>
                     </a>
                     
                     <!-- linkedin link and logo -->
-                    <a href="https://www.linkedin.com/in/kobie-wildermoth">
+                    <a href="https://www.linkedin.com/in/kobie-wildermoth" aria-label="LinkedIn">
                         <i class="bx bxl-linkedin-square"></i>
                     </a>
 
                     <!-- instagram link and logo -->
-                    <a href="https://www.instagram.com/kobie._w/">
+                    <a href="https://www.instagram.com/kobie._w/" aria-label="Instagram">
                         <i class="bx bxl-instagram-alt"></i>
                     </a>                    
                 </div>
                 
-                <!-- hire button uses mailto to write out email subject -->
-                <!-- want to upgrade in future (maybe linkedin messages) -->
+                <!-- Project and contact links -->
                 <div class="btn-group">
-                    <a href="mailto:kobiew06@outlook.com?subject=Job%20Opportunity:&body=Hi%20Kobie," class="btn">Hire</a>
+                    <a href="#projects" class="btn">My Projects</a>
                     <a href="#contact" class="btn">Contact</a>
                 </div>
             </div>
@@ -85,9 +84,11 @@
              
             <div class="about-content">
             <h2>About <span>Me</span></h2>
-            <p>I began my journey in retail, earning a Certificate III and building strong people skills. I further expanded my business knowledge with a Diploma of Business. Now, I’m pursuing my passion for technology with a Computer Science degree, where I blend my entrepreneurial spirit with a love for coding and innovation. Outside of my studies, I’m also passionate about building and maintaining PCs, which has given me a deep appreciation for hardware and hands-on problem solving. My background in business, retail, and tech lets me bring a holistic, customer-focused approach as I build solutions for the future.</p>
+            <p>I’m interested in how software works and how people use it. My projects range from command-line tools and desktop applications to cloud storage. I also enjoy building and maintaining PCs.</p>
+            <p>Alongside my computer science studies, I test voice agents, review calls and help refine their behaviour. My background also includes retail experience, a Certificate III and a Diploma of Business.</p>
             <!-- google drive download link for resume -->
-            <a href="https://drive.google.com/file/d/1Rv0q2taq3PSb4QSSxDEob484Li_ZjShi/view?usp=sharing" class="btn">Download CV</a>
+            <a href="documents/Kobie_Wildermoth_CV.pdf" class="btn">View CV</a>
+            </div>
         </section>
 <!-- skills section -->
         <!-- reused some code from removed experience section -->
@@ -95,30 +96,48 @@
             <h2 class="heading">Skills</h2>
 
             <div class="experience-container">
-                <div class="experience-box">
+                <article class="experience-box">
                     <div class="experience-info">
-                        <!-- in future upgrade to proper logos relevant (real python logo) -->
-                        <i class ="bx bx-code"></i>
-                        <h4>Python</h4>
-                        <p>Proficient in Python, using it to solve complex problems, automate tasks, and build efficient, scalable solutions.</p>
+                        <i class="bx bx-code-alt" aria-hidden="true"></i>
+                        <h3>Python</h3>
+                        <p>Command-line applications, object-oriented programming and JSON storage.</p>
                     </div>
-                </div>
-
-                <div class="experience-box">
+                </article>
+                <article class="experience-box">
                     <div class="experience-info">
-                        <i class ="bx bx-user"></i>
-                        <h4>Web Development</h4>
-                        <p>Skilled in HTML, CSS, and JavaScript, creating responsive and user-friendly web applications.</p>
+                        <i class="bx bx-code-block" aria-hidden="true"></i>
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS and JavaScript for responsive websites and browser interfaces.</p>
                     </div>
-                </div>
-                
-                <div class="experience-box">
+                </article>
+                <article class="experience-box">
                     <div class="experience-info">
-                        <i class ="bx bx-briefcase"></i>
-                        <h4>Problem Solving</h4>
-                        <p>Experienced in analyzing complex problems, developing innovative solutions, and implementing effective strategies to achieve desired outcomes.</p>
+                        <i class="bx bx-cloud" aria-hidden="true"></i>
+                        <h3>AWS &amp; Cloud Storage</h3>
+                        <p>S3 storage, IAM permissions, encryption and access-control testing.</p>
                     </div>
-                </div>
+                </article>
+                <article class="experience-box">
+                    <div class="experience-info">
+                        <i class="bx bx-check-shield" aria-hidden="true"></i>
+                        <h3>Agent Testing</h3>
+                        <p>Test cases, edge cases, production call analysis and regression testing.</p>
+                    </div>
+                </article>
+                <article class="experience-box">
+                    <div class="experience-info">
+                        <i class="bx bx-conversation" aria-hidden="true"></i>
+                        <h3>Prompt Debugging</h3>
+                        <p>Investigating agent behaviour, refining prompts and checking changes in staging.</p>
+                    </div>
+                </article>
+                <article class="experience-box">
+                    <div class="experience-info">
+                        <i class="bx bx-desktop" aria-hidden="true"></i>
+                        <h3>PC Hardware</h3>
+                        <p>Building, maintaining and troubleshooting desktop computers.</p><a class="bench-link" href="#pc-game">Try the troubleshooting game ↗</a>
+                    </div>
+                </article>
             </div>
         </section>
 <!-- projects section -->
@@ -127,125 +146,157 @@
             <h2 class="heading">Projects</h2>
 
 
-            <!-- videos and photos of projects here -->
-             <!-- download soon placeholder buttons ready for finished projects -->
-            <div class="projects-container">
-                <div class="project-box">
-                    <video src="nexus.mp4" controls></video>
-                    <h3>Project 1: Nexus</h3>
-                    <p>One of my key projects is Nexus, an all-in-one desktop application I’m developing. It integrates a local AI assistant, file management, system monitoring, and task automation—all built with a modular UI and a focus on efficiency. This project blends my passion for AI, user experience design, and everyday productivity.</p>
-                    <div class="btn">Download Soon!</div>
+            <div class="projects-heading">
+                <p>Select a project to open it. Select it again to close.</p>
+                <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button>
+            </div>
+            <div class="project-explorer is-collapsed">
+                <div class="project-tabs" role="group" aria-label="Projects">
+                    <button id="tab-jarvis" type="button" aria-controls="project-jarvis" aria-expanded="false"><strong>JARVIS</strong><small>macOS assistant</small><span aria-hidden="true">+</span></button>
+                    <button id="tab-cloud" type="button" aria-controls="project-cloud" aria-expanded="false"><strong>Cloud Storage</strong><small>CST230 · AWS</small><span aria-hidden="true">+</span></button>
+                    <button id="tab-nexus" type="button" aria-controls="project-nexus" aria-expanded="false"><strong>Nexus</strong><small>Desktop application</small><span aria-hidden="true">+</span></button>
+                    <button id="tab-planner" type="button" aria-controls="project-planner" aria-expanded="false"><strong>Task Planner</strong><small>Python · command line</small><span aria-hidden="true">+</span></button>
                 </div>
-
-                <div class="project-box">
-                    <video src="Demonstration.mp4" controls></video>
-                    <h3>Project 2: Task Planner</h3>
-                    <p>TaskPlanner is a command-line application I built in Python to help users organize tasks by categories, due dates, and priorities. It uses object-oriented design, persistent JSON storage, and flexible command input, making task management fast and efficient.</p>
-                    <div class="btn">Download Soon!</div>
+                <div class="project-workspace" hidden>
+                    <article id="project-jarvis" class="project-panel" role="region" hidden aria-labelledby="tab-jarvis" tabindex="0">
+                        <div class="project-description"><p class="project-type">Personal project · macOS · In development</p><h3>JARVIS</h3><p>JARVIS is a macOS assistant prototype built to connect conversation with practical actions. Chat runs on a free, on-device Qwen model. You can speak to it and hear spoken replies, search saved conversations, turn meeting audio into transcripts and notes, ask questions about a file you choose, or inspect your screen when needed. It can also search the public web, set reminders and use supported Mac apps through reviewed actions.
+                            </p><p>The longer-term aim is a voice-led desktop assistant that understands what you’re working on and can take on useful, carefully scoped tasks across your Mac. That broader capability is still being developed: voice reliability, response speed, memory use and app control need more work. Web searches use external services, and screen or app access depends on macOS permissions.</p></div>
+                        <section class="jarvis-orb-explorer" aria-labelledby="jarvis-orb-title">
+                            <div class="jarvis-orb-heading">
+                                <p class="project-type">VOICE INTERFACE</p>
+                                <h4 id="jarvis-orb-title">One orb, different states</h4>
+                                <p>Choose a state to see how JARVIS signals what it’s doing.</p>
+                            </div>
+                            <figure class="jarvis-orb-board">
+                                <img id="jarvis-orb-image" class="jarvis-orb-image" src="images/jarvis/orb-states/01-standby.png" alt="JARVIS orb in its ready standby state" width="1032" height="1032" fetchpriority="high">
+                            </figure>
+                            <div class="jarvis-orb-controls" role="group" aria-label="Choose an orb state">
+                                <button type="button" class="is-selected" aria-pressed="true" data-image="images/jarvis/orb-states/01-standby.png" data-alt="JARVIS orb in its ready standby state" data-title="Ready when you need me" data-copy="JARVIS is waiting for the wake word.">Ready</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/orb-states/02-follow-up.png" data-alt="JARVIS orb listening for a follow-up" data-title="Listening for a follow-up" data-copy="The conversation is open for another spoken request.">Follow-up</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/orb-states/03-listening.png" data-alt="JARVIS orb listening to the current request" data-title="Listening" data-copy="JARVIS is capturing speech for the current request.">Listening</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/orb-states/04-confirmation.png" data-alt="JARVIS orb waiting for the user's answer" data-title="Listening for your answer" data-copy="JARVIS is waiting for your response before it continues.">Your answer</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/orb-states/05-thinking.png" data-alt="JARVIS orb processing a request" data-title="Thinking" data-copy="The request is being processed before JARVIS replies.">Thinking</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/orb-states/06-speaking.png" data-alt="JARVIS orb speaking its response" data-title="Speaking" data-copy="JARVIS is reading its answer aloud.">Speaking</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/orb-states/07-paused.png" data-alt="JARVIS spoken response paused" data-title="Reply paused" data-copy="Spoken playback is paused and can be resumed.">Paused</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/orb-states/08-review.png" data-alt="JARVIS waiting for approval before continuing" data-title="Your approval is needed" data-copy="JARVIS is waiting for approval before it takes the next action.">Approval</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/orb-states/09-recording.png" data-alt="JARVIS recording session continues" data-title="Recording continues" data-copy="The recording session is still active.">Recording</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/orb-states/10-vision-watching.png" data-alt="JARVIS vision mode watching the screen" data-title="Vision is active" data-copy="Screen vision is on for this session.">Vision</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/orb-states/11-standby-compact.png" data-alt="Compact JARVIS orb ready at the desktop edge" data-title="Compact standby" data-copy="A reduced orb stays on screen while JARVIS waits in the background.">Compact</button>
+                            </div>
+                            <p class="jarvis-orb-status" aria-live="polite"><strong>Ready when you need me</strong><span>JARVIS is waiting for the wake word.</span></p>
+                        </section>
+                        <div class="jarvis-showcase">
+                            <figure class="jarvis-preview" data-view="chat">
+                                <img id="jarvis-preview-image" src="images/jarvis/chat-capabilities.png" alt="JARVIS chat answering a question about its capabilities and permission boundaries" width="1080" height="1348" fetchpriority="high">
+                                <figcaption><strong id="jarvis-preview-title">Chat capabilities</strong><span id="jarvis-preview-caption">A completed chat describing what JARVIS can do and where it needs permission.</span></figcaption>
+                            </figure>
+                            <div class="jarvis-view-picker" role="group" aria-label="Choose a JARVIS screenshot">
+                                <button type="button" class="is-selected" aria-pressed="true" data-image="images/jarvis/chat-capabilities.png" data-view="chat" data-title="Chat capabilities" data-caption="A completed chat describing what JARVIS can do and where it needs permission." data-alt="JARVIS chat answering a question about its capabilities and permission boundaries">Chat</button>
+                                <button type="button" aria-pressed="false" data-image="images/jarvis/screen-context.png" data-view="screen" data-title="Screen context" data-caption="Screen access is enabled while JARVIS answers a request about the visible article." data-alt="JARVIS summarising an article in chat while screen sharing is enabled">Screen context</button>
+                            </div>
+                        </div>
+                        <details class="project-notes"><summary>Project notes <span aria-hidden="true">+</span></summary><dl><div><dt>Current focus</dt><dd>Developing a voice-led way to interact with a personal assistant on macOS.</dd></div><div><dt>What the images show</dt><dd>A completed chat about JARVIS capabilities, a screen-context answer with screen sharing enabled, and an interactive set of eleven orb states using the individual PNG captures.</dd></div><div><dt>In development</dt><dd>Voice reliability, answer quality, model memory use and Mac automation need further testing across real use.</dd></div></dl></details>
+                    </article>
+                    <article id="project-cloud" class="project-panel" role="region" hidden aria-labelledby="tab-cloud" tabindex="0">
+                        <div class="transfer-preview">
+                            <div class="transfer-track" aria-hidden="true"><i class="bx bx-desktop transfer-computer"></i><div class="transfer-line"></div><i class="bx bx-file transfer-file"></i><i class="bx bx-cloud transfer-cloud"></i><i class="bx bx-check transfer-check"></i></div>
+                            <p>File transfer illustration · Web demo setup in progress</p>
+                        </div>
+                        <div class="project-description"><p class="project-type">University project · AWS S3 &amp; IAM</p><h3>Secure Cloud File Storage</h3><p>An AWS file storage project built for CST230. It uses S3, encryption and IAM permissions to control file access. A web interface for sign-in, uploads and downloads is in development.</p><a class="project-action" href="storage/">Open storage project <span aria-hidden="true">↗</span></a></div>
+                    
+                        <details class="project-notes"><summary>Project notes <span aria-hidden="true">+</span></summary><dl><div><dt>The brief</dt><dd>Build cloud file storage with controlled access and encryption for CST230.</dd></div><div><dt>Implemented</dt><dd>S3 storage and IAM permissions, with upload, download and access-denial evidence recorded in the report.</dd></div><div><dt>Still in progress</dt><dd>The browser interface is prepared. AWS sign-in and assessor access still need deployment and live checks.</dd></div></dl></details>
+                    </article>
+                    <article id="project-nexus" class="project-panel" role="region" hidden aria-labelledby="tab-nexus" tabindex="0">
+                        <video src="nexus.mp4" poster="nexus.jpg" controls preload="none" aria-label="Nexus demonstration"></video>
+                        <div class="project-description"><p class="project-type">Earlier project · Development paused</p><h3>Nexus</h3><p>A desktop application combining a local AI assistant, file management, system monitoring and task automation. The video shows an earlier version of the project.</p></div>
+                    
+                        <details class="project-notes"><summary>Project notes <span aria-hidden="true">+</span></summary><dl><div><dt>The idea</dt><dd>Put an assistant, file tools and system information in one desktop application.</dd></div><div><dt>What to watch</dt><dd>The recording shows an earlier version of the interface and its features.</dd></div><div><dt>Where it stands</dt><dd>Development is paused while I explore a voice-led approach through JARVIS.</dd></div></dl></details>
+                    </article>
+                    <article id="project-planner" class="project-panel" role="region" hidden aria-labelledby="tab-planner" tabindex="0">
+                        <video src="Demonstration.mp4" controls preload="none" aria-label="Task Planner demonstration"></video>
+                        <div class="project-description"><p class="project-type">Python · JSON storage</p><h3>Task Planner</h3><p>A Python command-line application for organising tasks by category, due date and priority. It uses object-oriented design and JSON storage to retain tasks between sessions.</p></div>
+                    
+                        <details class="project-notes"><summary>Project notes <span aria-hidden="true">+</span></summary><dl><div><dt>The task</dt><dd>Organise tasks by category, due date and priority from the command line.</dd></div><div><dt>How it works</dt><dd>Python classes structure the application, and JSON retains tasks between sessions.</dd></div><div><dt>See it in use</dt><dd>The recording above walks through the application in the terminal.</dd></div></dl></details>
+                    </article>
                 </div>
-
-                <div class="project-box">
-                    <img src="next.jpg" alt="">
-                    <h3>Project 3: Nexus 1.1</h3>
-                    <p>Nexus 1.1 will introduce a range of new modules, including a full file manager, advanced system tools, a dedicated browser, media controls, AI integration, and more. Each section—like notes, games, and lists—will offer intuitive navigation, customizable layouts, and seamless file and data management. Stay tuned as these features roll out!</p>
-                    <div class="btn">Download Soon!</div>
-                </div>
-
-                <!-- unused project boxes removed for simplicity -->
-
-                <!-- <div class="project-box">
-                    <img src="coming.jpg" alt="">
-                    <h3>Project 4</h3>
-                    <p>Project coming soon.</p>
-                    <div class="btn">Review Project</div>
-                </div>
-
-                <div class="project-box">
-                    <img src="coming.jpg" alt="">
-                    <h3>Project 5</h3>
-                    <p>Project coming soon.</p>
-                    <div class="btn">Review Project</div>
-                </div>
-
-                <div class="project-box">
-                    <img src="coming.jpg" alt="">
-                    <h3>Project 6</h3>
-                    <p>Project coming soon.</p>
-                    <div class="btn">Review Project</div>
-                </div> -->
-
-                
             </div>
         </section>
+        <section class="pc-game" id="pc-game" aria-labelledby="pc-game-title">
+            <div class="pc-game-heading"><div><p class="game-eyebrow">A little hardware troubleshooting</p><h2 id="pc-game-title">“It worked yesterday.”</h2></div><p id="game-progress">Case 1 of 6</p></div>
+            <p class="game-intro">Pick the part you’d check first. No actual PCs were harmed.</p>
+            <div class="pc-game-layout">
+                <div class="pc-scene" id="pc-scene" data-fault="gpu" aria-label="Interactive PC troubleshooting model"><div class="pc-fallback">
+                    <div class="game-monitor"><div class="monitor-display"><span class="monitor-dot"></span><p id="monitor-message">NO SIGNAL</p><small id="monitor-detail">Is this thing on?</small></div><div class="monitor-neck"></div><div class="monitor-foot"></div></div>
+                    <div class="game-tower"><div class="case-top"><span id="case-power" class="case-power"></span><small>KOBIE'S TEST BENCH</small></div><div class="motherboard">
+                        <button class="pc-part cooler-part" data-part="cooler" type="button" aria-label="Check CPU cooler"><span class="cooler-fan" aria-hidden="true">✣</span><strong>CPU COOLER</strong></button>
+                        <button class="pc-part ram-part" data-part="ram" type="button" aria-label="Check RAM"><span class="ram-sticks" aria-hidden="true"><i></i><i></i></span><strong>RAM</strong></button>
+                        <div class="debug-leds" aria-hidden="true"><i class="debug-dram"></i> DRAM <i class="debug-vga"></i> VGA</div>
+                        <button class="pc-part gpu-part" data-part="gpu" type="button" aria-label="Check graphics card"><span class="gpu-fans" aria-hidden="true">◉ ◉</span><strong>GRAPHICS CARD</strong></button>
+                        <button class="pc-part ssd-part" data-part="ssd" type="button" aria-label="Check SSD"><span aria-hidden="true">▤</span><strong>SSD</strong></button>
+                        <button class="pc-part psu-part" data-part="psu" type="button" aria-label="Check power supply"><span aria-hidden="true">⏻</span><strong>POWER SUPPLY</strong></button>
+                    </div></div>
+                    <button class="pc-part cable-part" data-part="cable" type="button" aria-label="Check display cable and monitor input">↳ Display cable / input</button></div>
+                    <div id="pc3d-stage" class="pc3d-stage" aria-label="3D computer model"><p class="pc3d-loading">Loading the test bench…</p></div>
+                    <div class="pc3d-toolbar"><p id="pc3d-label" aria-live="polite">Drag to rotate · Click a component</p><button id="pc3d-reset" type="button" hidden>Reset view</button></div>
+                </div>
+                <div class="game-case">
+                    <p class="game-case-label">The symptoms</p><h3 id="fault-title" tabindex="-1">Fans on. Screen off.</h3>
+                    <p id="fault-clue">The monitor cable is connected to the graphics card and the correct input is selected. The motherboard’s white VGA light stays on.</p>
+                    <p class="game-prompt">What would you check first?</p>
+                    <div class="game-choices" aria-label="Choose a component">
+                        <button type="button" data-part="gpu">Graphics card</button><button type="button" data-part="ram">RAM</button><button type="button" data-part="cooler">CPU cooler</button><button type="button" data-part="ssd">SSD</button><button type="button" data-part="psu">Power supply</button><button type="button" data-part="cable">Display cable / input</button>
+                    </div>
+                    <p id="game-feedback" class="game-feedback" role="status" aria-live="polite">Select a component in the PC or use the buttons.</p>
+                    <div class="game-actions"><button id="game-next" type="button" class="btn" hidden>Next problem →</button><button id="game-restart" type="button" class="motion-toggle">Start again</button></div>
+                    <p id="game-score" class="game-score">First-try fixes: 0 / 0</p>
+                </div>
+            </div>
+            <p class="game-note">A simplified game, not a diagnosis tool. LED meanings depend on the motherboard; these cases use labelled DRAM and VGA indicators. <a href="https://www.asus.com/support/faq/1042678/" target="_blank" rel="noopener noreferrer">Indicator reference ↗</a></p>
+        </section>
 <!-- contact section -->
-        <section class="contact" id="contact">
-            <h2 class="heading">Contact <span>Me</span></h2>
-
-            <!-- inputs are grouped for formatting -->
-            <form id="contact-form" action="#">
-                <div class="input-group">
-                    <div class="input-box">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
-                    </div>
-                    <div class="input-box">
-                        <input type="number" placeholder="Phone">   
-                        <input type="text" placeholder="Subject">
-                    </div>
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="contact-layout">
+                <div class="contact-intro">
+                    <h2 class="heading" id="contact-title">Contact me</h2>
+                    <p>You can reach me by email or on LinkedIn.</p>
+                    <a class="contact-direct" href="mailto:kobiew06@outlook.com"><i class="bx bx-envelope" aria-hidden="true"></i>kobiew06@outlook.com</a>
+                    <a class="contact-direct" href="https://www.linkedin.com/in/kobie-wildermoth"><i class="bx bxl-linkedin-square" aria-hidden="true"></i>LinkedIn <span aria-hidden="true">↗</span></a>
                 </div>
-
-                <div class="input-group-2">
-                    <textarea name="" id="" placeholder="Message" cols="30" rows="10"></textarea>
-                    <input type="submit" value="Send Message" class="btn">
-                </div>
-            </form>
+                <form id="contact-form" action="#" aria-label="Draft an email" aria-describedby="contact-note">
+                    <div class="contact-field-row">
+                        <div class="contact-field"><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" autocomplete="name" required></div>
+                        <div class="contact-field"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div>
+                    </div>
+                    <div class="contact-field"><label for="contact-subject">Subject <span>(optional)</span></label><input id="contact-subject" name="subject" type="text"></div>
+                    <div class="contact-field"><label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="5" required></textarea></div>
+                    <div class="contact-submit"><button type="submit" class="btn">Draft email <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></button><p class="form-note" id="contact-note">Opens a draft in your email app.</p></div>
+                </form>
+            </div>
         </section>
 <!-- footer -->
         <footer class="footer">
             <div class="social-icons">
                 <!-- github -->
-                <a href="https://github.com/kobiew06">
+                <a href="https://github.com/kobiew06" aria-label="GitHub">
                     <i class="bx bxl-github"></i>
                 </a>
                 <!-- linkedin -->
-                <a href="https://www.linkedin.com/in/kobie-wildermoth">
+                <a href="https://www.linkedin.com/in/kobie-wildermoth" aria-label="LinkedIn">
                     <i class="bx bxl-linkedin-square"></i>
                 </a>
                 <!-- instagram -->
-                <a href="https://www.instagram.com/kobie._w/">
+                <a href="https://www.instagram.com/kobie._w/" aria-label="Instagram">
                     <i class="bx bxl-instagram-alt"></i>
                 </a>                    
             </div>
 
-            <!-- unused bottom nav -->
-
-            <!-- <ul class="list">
-                <li>
-                    <a href="#">FAQ</a>
-                </li>
-
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
-            </ul> -->
-
+            <p class="footer-aside">Built by Kobie. Occasionally broken by Kobie.</p>
             <p class="copyright">Copyright 2026 Kobie Wildermoth | All rights reserved.</p>
 
         </footer>        
 
-    <script src="script.js"></script>
+    <script src="script.js?v=9"></script>
+    <script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js","three/addons/controls/OrbitControls.js":"./vendor/three/OrbitControls.js"}}</script>
+    <script type="module" src="pc-3d.js"></script>
   </body>
 </html>
