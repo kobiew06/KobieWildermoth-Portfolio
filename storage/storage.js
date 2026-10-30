@@ -133,12 +133,12 @@
     $('upload-button').disabled = true;
     status(`Uploading ${file.name}…`);
     try {
-      const data = await api('/uploads', { method: 'POST', body: JSON.stringify({ filename: file.name, size: file.size }) });
+      const data = await api('/uploads', { method: 'POST', body: JSON.stringify({ filename: file.name, size: file.size }) }).catch(error => { throw new Error(`Could not prepare upload: ${error.message}`); });
       const form = new FormData();
       for (const [key, value] of Object.entries(data.fields)) form.append(key, value);
       form.append('file', file);
       if (new URL(data.url).protocol !== 'https:') throw new Error('The upload address is invalid.');
-      const response = await fetch(data.url, { method: 'POST', body: form, referrerPolicy: 'no-referrer' });
+      const response = await fetch(data.url, { method: 'POST', body: form, referrerPolicy: 'no-referrer' }).catch(() => { throw new Error('Could not connect to S3 for the upload. Please try again; if it continues, the storage endpoint or CORS configuration needs checking.'); });
       if (!response.ok) throw new Error(`Upload failed (${response.status}). Try signing in again if the problem continues.`);
       $('upload-form').reset();
       await listFiles();
